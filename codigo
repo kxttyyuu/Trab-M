@@ -1,0 +1,78 @@
+(pessoa.cs)
+namespace Trab.M
+{
+    internal class Pessoa
+    {
+        //atributo de classe
+        private string nome;
+
+        //construtor sem parâmetro
+        public Pessoa()
+        {
+            this.nome = null;
+        }
+
+        //construtor com parâmetro
+        public Pessoa(string nome)
+        {
+            this.nome = nome;
+        }
+
+        //propriedade do campo nome para acesso ao seu conteúdo
+        public string Nome
+        {
+            get { return nome; }  //retornar o valor armazenado em um atributo
+            set { nome = value; } //armazenar o valor no campo
+        }
+
+        //método que retorna uma string contendo as informações da pessoa
+        public override string ToString()
+        {
+            return (string.Format("Nome: {0}", Nome));
+        }
+    }
+}
+
+(class1.cs)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Trab.M
+{
+    internal class Class1
+    {
+    }
+}
+
+(program.cs)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Trab.M
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //criação de um objeto p, do tipo da classe Pessoa
+            Pessoa p = new Pessoa();
+
+            //exibindo na tela informações do objeto p, realizando uma chamada no método ToString
+            Console.WriteLine(p.ToString());
+
+            //atribuindo um nome ao objeto p, por meio da propriedade Nome
+            p.Nome = "Flora";
+
+            //exibindo na tela informações do objeto p, após a atribuição do nome
+            Console.WriteLine(p);
+            Console.ReadKey();
+        }
+           
+    }
+}
