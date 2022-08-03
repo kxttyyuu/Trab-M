@@ -73,6 +73,23 @@ namespace Trab.M
             Console.WriteLine(p);
             Console.ReadKey();
         }
-           
+            //Atributos da classe
+        private string nome;
+        private int idade;
+        private double altura;
+        private string sexo;
+
+        //construtor sem parâmetros
+        public Pessoa()
+        {
+            this.nome = null;
+            this.idade = 0;
+            this.altura = 0.0;
+            sexo = null; 
+        }
+
+    }
+}
+
     }
 }
